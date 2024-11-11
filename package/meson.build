@@ -78,7 +78,7 @@ packaging_script = files('package.sh')
 # You cannot run the packaging script if tar isn't installed on your system
 if find_program('tar', required: false).found()
 	if get_variable('host_pkg_files', []).length() == 0
-		info('No host_pkg_files variable defined: disabling package target.')
+		message('No host_pkg_files variable defined: disabling package target.')
 	else
 		run_target('package',
 			command: [
@@ -94,7 +94,7 @@ if find_program('tar', required: false).found()
 	endif
 
 	if get_variable('native_pkg_files', []).length() == 0
-		info('No host_pkg_files variable defined: disabling package target.')
+		message('No host_pkg_files variable defined: disabling package target.')
 	else
 		run_target('package-native',
 			command: [
