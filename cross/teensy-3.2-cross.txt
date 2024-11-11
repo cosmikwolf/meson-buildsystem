@@ -49,7 +49,6 @@ cpp_args = [
     '-std=gnu++11',
     '-felide-constructors',
     '-fno-exceptions',
-    '-fno-rtti'
     ]
 
 c_link_args = [
